@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brabiel | Conversor de Links</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <div class="logo">Brabiel</div>
+            <div class="subtitle">Converta seus links e apoie o canal!</div>
+        </header>
+
+        <div class="stores-container">
+            <span class="store-badge amazon">Amazon</span>
+            <span class="store-badge shopee">Shopee</span>
+            <span class="store-badge mercadolivre">Mercado Livre</span>
+        </div>
+
+        <div class="form-group">
+            <label for="link-input">Cole o link original do produto:</label>
+            <input type="url" id="link-input" class="input-url" placeholder="https://shopee.com.br/produto-exemplo...">
+        </div>
+
+        <button class="btn-convert" id="btn-convert">Gerar Link Comissionado</button>
+
+        <div class="result-container" id="result-box">
+            <div class="result-label">Seu link pronto para compra:</div>
+            <div class="output-url" id="link-output">https://amzn.to/exemploGerado</div>
+            
+            <div class="action-buttons">
+                <button class="btn-action btn-copy" id="btn-copy">Copiar Link</button>
+                <a href="#" target="_blank" class="btn-action btn-open" id="btn-open">Ir para a Loja</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Brabiel. Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

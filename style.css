@@ -1,0 +1,224 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal */
+.main-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2f5;
+    text-align: center;
+}
+
+/* Header & Logo */
+header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+/* Badges das Lojas Suportadas */
+.stores-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.store-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.amazon {
+    background-color: #FF9900;
+    color: #000000;
+}
+
+.shopee {
+    background-color: #EE4D2D;
+    color: #FFFFFF;
+}
+
+.mercadolivre {
+    background-color: #FFF159;
+    color: #333333;
+}
+
+/* Área de Input e Formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+.input-url {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+
+.input-url:focus {
+    border-color: #ff4e50;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 78, 80, 0.15);
+}
+
+/* Botão de Converter */
+.btn-convert {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-convert:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(255, 78, 80, 0.3);
+}
+
+.btn-convert:active {
+    transform: translateY(1px);
+}
+
+/* Box de Resultado (Aparece após conversão) */
+.result-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 2px dashed #e2e8f0;
+    text-align: left;
+    display: none; /* O JavaScript vai mudar para 'block' quando convertido */
+}
+
+.result-container.active {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.result-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.output-url {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #1e293b;
+    word-break: break-all;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-copy {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+}
+
+.btn-copy:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-open {
+    background-color: #10b981;
+    border: none;
+    color: #ffffff;
+}
+
+.btn-open:hover {
+    background-color: #059669;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+/* Animação de surgimento suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
